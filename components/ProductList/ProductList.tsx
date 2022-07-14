@@ -19,9 +19,14 @@ const mapProductsToCards = (products: TProduct[]) =>
   ))
 
 const ProductList = ({ products }: ProductListProps) => (
-  <Card.Group itemsPerRow={2} stackable>
-    {mapProductsToCards(products)}
-  </Card.Group>
+  <>
+    <Link href='/yes-or-not' passHref>
+      <a>¿Debo comer un avocado hoy?</a>
+    </Link>
+    <Card.Group itemsPerRow={2} stackable>
+      {mapProductsToCards(products)}
+    </Card.Group>
+  </>
 )
 
 export default ProductList
